@@ -103,12 +103,12 @@
 </div>
 <!-- mobile menu start -->
 <div class="mobile-menu pt-3">
-<ul class="menu-list d-flex justify-content-between">
+<ul class="menu-list d-flex justify-content-around">
     <li class="menu-item"><div class="menu-icon-container">
         <img class="menu-icon" src="assets/icons/house-icon.png" alt="home icon">
     </div></li>
     <li class="menu-item"><div class="menu-icon-container">
-        <img class="menu-icon" src="assets/icons/cart-icon.png" alt="cart icon">
+        <img class="menu-icon cart-icon" src="assets/icons/cart-icon.png" alt="cart icon">
     </div></li>
     <li class="menu-item"><div class="menu-icon-container">
         <img class="menu-icon account-icon" src="assets/icons/person-icon.png" alt="person icon">
@@ -121,12 +121,29 @@
 
 <script>
     $(".account-icon").click(function(){
-       $(".header").toggleClass("account-header");
-       $(".header-heading").toggle();
-       $(".categories-container").toggleClass("hide");
-       $(".account-info").toggleClass("show");
-       $(".header").toggleClass("align-items-center ");
+       $(".header").addClass("account-header");
+       $(".header-heading").addClass("hide");
+       $(".categories-container").addClass("hide");
+       $(".account-info").addClass("show");
+       $(".header").removeClass('align-items-center');
+       $(".left-arrow-icon").click(()=>{
+        $(".header").removeClass("account-header");
+       $(".header-heading").removeClass("hide")
+       $(".categories-container").removeClass("hide");
+       $(".account-info").removeClass("show");
+       $(".header").addClass('align-items-center');
+      
     })
+    });
+    $(".cart-icon").click(()=>{
+        $(".header").removeClass("account-header");
+       $(".header-heading").removeClass("hide")
+       $(".categories-container").removeClass("hide");
+       $(".account-info").removeClass("show");
+       $(".header").addClass('align-items-center');
+      
+    })
+
 </script>
 
 </body>
