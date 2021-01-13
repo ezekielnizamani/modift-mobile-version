@@ -31,19 +31,46 @@ body{
     border-bottom-right-radius: 20px;
 }
 /* account details header */
-.account-header{
+.account-header-info{
     height: 200px;
-    position: absolute;
+ 
     width: 100%;
 }
-.account-header > .left-arrow-icon-container,
-.account-header > .dots-icon-container {
+.home-header{
+    height: 100vh !important;
+    border-radius: 0 !important;
+}
+.account-header-info > .left-arrow-icon-container,
+.account-header-info > .dots-icon-container {
 margin-top: 20px;
 }
 .header-heading{
     font-size: 1rem;
     padding: 0;
     margin: 0;
+}
+.home-header-heading{
+    color: #fff;
+    line-height: 1.7;
+    font-weight: 800;
+}
+.header-icon-container{
+    height: 100px;
+}
+.header-icon-container > img{
+    height: 100%;
+}
+.btn-custom{
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 1.26rem;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border-radius: 50px;
+}
+.header-content{
+    width: 90%;
+    
 }
 .left-arrow-icon-container,
 .dots-icon-container{
@@ -107,6 +134,7 @@ flex-wrap: wrap;
     box-shadow: 0 0 4px rgba(0, 0, 0,.2);
     padding-right: 10px;
     padding-left: 10px;
+    z-index: 1000;
 }
 .menu-list{
     list-style: none;
@@ -133,7 +161,7 @@ margin-top: 2px;
 
 /* mobile menu end */
 
-/* account page style start*/
+/* account info page style start*/
 .account-info{
     height: 100%;
     width: 80%;
@@ -188,9 +216,7 @@ margin-top: 2px;
     font-weight: 800;
     color: rgb(56, 54, 54);
 }
-.account-info{
-    display: none;
-}
+
 .account-menu-list{
     list-style: none;
    
@@ -204,4 +230,10 @@ margin-top: 2px;
     font-size: 1.45rem;
     font-weight: bold;
 }
-/* accout page style end */
+/* accout info page style end */
+
+/* account page style start  */
+.account-header{
+height: 50%;
+}
+/* account page style end */
